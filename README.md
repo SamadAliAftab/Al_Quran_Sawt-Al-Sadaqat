@@ -25,16 +25,16 @@ To keep the primary application lightweight and optimize initial app download si
 └── README.md       # Repository documentation
 
 
-**🔗 CDN & Direct Access**
+##🔗 CDN & Direct Access
 Assets hosted in this repository can be accessed directly or via GitHub-backed CDN delivery for in-app integration:
 [https://raw.githubusercontent.com/SamadAliAftab/Al_Quran_Sawt-Al-Sadaqat/main/](https://raw.githubusercontent.com/SamadAliAftab/Al_Quran_Sawt-Al-Sadaqat/main/)[path-to-asset]
 
-**📄 License & Usage**
+##📄 License & Usage
 The media assets in this repository are maintained specifically for use within the Al-Quran: Sawt-Al-Sadaqat mobile application.
 
 Usage Terms: Audio recitations and related data are made available for non-commercial educational and religious use.
 
 Please refer to the LICENSE file for specific terms regarding asset redistribution.
 
-**✉️ Support & Inquiries**
+##✉️ Support & Inquiries
 For questions regarding these assets or integration issues with the mobile app, please open an issue in this repository or contact the maintainer directly.
