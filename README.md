@@ -14,20 +14,6 @@ To keep the primary application lightweight and optimize initial app download si
 
 ---
 
-## 📂 Repository Structure
-
-```text
-.
-├── audio/          # High-quality audio files and recitations
-├── data/           # Metadata, JSON indexes, and manifest files
-├── fonts/          # Specialized Fonts packages for the Arabic/Urdu & other languages
-├── graphics/       # App assets, vector icons, and UI imagery
-└── README.md       # Repository documentation
-
-
-##🔗 CDN & Direct Access
-Assets hosted in this repository can be accessed directly or via GitHub-backed CDN delivery for in-app integration:
-[https://raw.githubusercontent.com/SamadAliAftab/Al_Quran_Sawt-Al-Sadaqat/main/](https://raw.githubusercontent.com/SamadAliAftab/Al_Quran_Sawt-Al-Sadaqat/main/)[path-to-asset]
 
 ##📄 License & Usage
 The media assets in this repository are maintained specifically for use within the Al-Quran: Sawt-Al-Sadaqat mobile application.
