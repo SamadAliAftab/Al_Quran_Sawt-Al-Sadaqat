@@ -18,9 +18,6 @@ To keep the primary application lightweight and optimize initial app download si
 ##📄 License & Usage
 The media assets in this repository are maintained specifically for use within the Al-Quran: Sawt-Al-Sadaqat mobile application.
 
-Usage Terms: Audio recitations and related data are made available for non-commercial educational and religious use.
-
-Please refer to the LICENSE file for specific terms regarding asset redistribution.
 
 ##✉️ Support & Inquiries
 For questions regarding these assets or integration issues with the mobile app, please open an issue in this repository or contact the maintainer directly.
