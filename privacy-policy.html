@@ -2,97 +2,533 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Privacy Policy — Al-Quran: Sawt Al-Sadaqat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Privacy Policy for Al-Quran: Sawt-Al-Sadaqat">
+<meta name="theme-color" content="#071a2f">
+<title>Privacy Policy - Al-Quran: Sawt-Al-Sadaqat</title>
+
 <style>
-  body { font-family: Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #222; }
-  h1 { font-size: 1.6em; }
-  h2 { font-size: 1.2em; margin-top: 1.8em; }
-  .updated { color: #666; font-size: 0.9em; }
+  :root {
+    --navy: #071a2f;
+    --navy-2: #0c2947;
+    --gold: #d8b56a;
+    --gold-light: #f0d89a;
+    --cream: #fbf8f0;
+    --paper: #ffffff;
+    --text: #243142;
+    --muted: #687585;
+    --line: #e9e4d8;
+    --soft: #f7f4ec;
+    --green: #2f7359;
+    --shadow: 0 18px 55px rgba(7, 26, 47, .10);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(circle at 15% 0%, rgba(216,181,106,.13), transparent 28%),
+      radial-gradient(circle at 90% 10%, rgba(216,181,106,.10), transparent 25%),
+      var(--cream);
+    color: var(--text);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.75;
+  }
+
+  .topbar {
+    height: 5px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      linear-gradient(135deg, rgba(7,26,47,.98), rgba(12,41,71,.96)),
+      var(--navy);
+    color: #fff;
+    padding: 58px 20px 72px;
+    text-align: center;
+  }
+
+  .hero::before,
+  .hero::after {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    border: 1px solid rgba(216,181,106,.20);
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
+
+  .hero::before { left: -120px; top: -125px; }
+  .hero::after { right: -120px; bottom: -125px; }
+
+  .brand-mark {
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 22px;
+    border: 1px solid rgba(240,216,154,.55);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--gold-light);
+    background: rgba(255,255,255,.045);
+    box-shadow: 0 0 0 8px rgba(216,181,106,.045);
+  }
+
+  .brand-mark svg { width: 45px; height: 45px; }
+
+  .hero h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 500;
+    letter-spacing: -.02em;
+  }
+
+  .tagline {
+    margin: 10px auto 0;
+    max-width: 680px;
+    color: #e7dfcc;
+    font-size: 1rem;
+  }
+
+  .updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 22px;
+    padding: 7px 13px;
+    border: 1px solid rgba(216,181,106,.35);
+    border-radius: 999px;
+    color: #f0e8d5;
+    font-size: .84rem;
+  }
+
+  .page {
+    width: min(920px, calc(100% - 32px));
+    margin: -30px auto 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card {
+    background: var(--paper);
+    border: 1px solid rgba(7,26,47,.06);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .summary-item {
+    padding: 25px 22px;
+    text-align: center;
+    border-right: 1px solid var(--line);
+  }
+
+  .summary-item:last-child { border-right: 0; }
+
+  .summary-icon {
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 10px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: var(--green);
+    background: #edf6f0;
+  }
+
+  .summary-icon svg { width: 21px; height: 21px; }
+
+  .summary strong {
+    display: block;
+    color: var(--navy);
+    font-size: .94rem;
+  }
+
+  .summary span {
+    display: block;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: .78rem;
+  }
+
+  .content { padding: 34px 38px 42px; }
+
+  .intro {
+    margin: 0 0 28px;
+    font-size: 1rem;
+    color: #405062;
+  }
+
+  section {
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  section:first-of-type { border-top: 0; }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 12px;
+  }
+
+  .section-icon {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--soft);
+    color: var(--navy);
+    border: 1px solid var(--line);
+  }
+
+  .section-icon svg { width: 21px; height: 21px; }
+
+  h2 {
+    margin: 0;
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.38rem;
+    font-weight: 600;
+  }
+
+  p { margin: 0 0 12px; }
+
+  ul {
+    margin: 10px 0 0;
+    padding-left: 23px;
+  }
+
+  li { margin: 8px 0; }
+
+  li::marker { color: var(--gold); }
+
+  .highlight {
+    margin: 17px 0 4px;
+    padding: 17px 19px;
+    background: linear-gradient(135deg, #faf7ef, #fffdf8);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+  }
+
+  .contact {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 16px;
+    padding: 22px 23px;
+    margin-top: 4px;
+  }
+
+  .contact strong { color: var(--gold-light); }
+
+  .contact a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,.45);
+  }
+
+  .contact a:hover { color: var(--gold-light); }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .82rem;
+    padding: 20px 10px 0;
+  }
+
+  footer .gold { color: #a17c35; }
+
+  @media (max-width: 700px) {
+    .hero { padding: 45px 18px 62px; }
+    .page { width: min(100% - 20px, 920px); }
+    .content { padding: 25px 21px 32px; }
+    .summary { grid-template-columns: 1fr; }
+    .summary-item {
+      border-right: 0;
+      border-bottom: 1px solid var(--line);
+      padding: 18px;
+    }
+    .summary-item:last-child { border-bottom: 0; }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #07121f;
+      color: #d9e1e9;
+    }
+    .card { background: #0d1c2c; border-color: rgba(255,255,255,.06); }
+    .summary { border-color: rgba(255,255,255,.08); }
+    .summary-item { border-color: rgba(255,255,255,.08); }
+    .summary strong, h2 { color: #f4ead2; }
+    .summary span, .intro { color: #aebbc8; }
+    section { border-color: rgba(255,255,255,.08); }
+    .section-icon { background: #122538; border-color: rgba(255,255,255,.08); color: #e7d19b; }
+    .highlight { background: #101f2f; border-color: rgba(255,255,255,.08); }
+    footer { color: #8797a8; }
+  }
 </style>
 </head>
+
 <body>
+<div class="topbar"></div>
 
-<h1>Privacy Policy</h1>
-<p class="updated">Last updated: September 2026</p>
+<header class="hero">
+  <div class="brand-mark" aria-hidden="true">
+    <!-- Open book + crescent inspired mark -->
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M10 18c10-4 17-2 22 3v31c-5-5-12-7-22-3V18Z"/>
+      <path d="M54 18c-10-4-17-2-22 3v31c5-5 12-7 22-3V18Z"/>
+      <path d="M42 9c7 2 11 8 10 15-1 7-7 12-14 12 5-3 8-8 8-14 0-5-2-9-4-13Z" fill="currentColor" stroke="none"/>
+    </svg>
+  </div>
 
-<p>
-Al-Quran: Sawt Al-Sadaqat ("the App") is developed and maintained by Samad Ali Aftab.
-This page explains what information the App does and does not collect.
-</p>
+  <h1>Privacy Policy</h1>
+  <p class="tagline">Al-Quran: Sawt-Al-Sadaqat</p>
+  <div class="updated">
+    <span>◆</span>
+    Last updated: September 2026
+  </div>
+</header>
 
-<h2>Summary</h2>
-<p>
-The App does not require an account, does not collect personal information,
-does not use analytics or advertising, and does not share any data with
-third parties. Everything you read, listen to, or bookmark stays on your
-own device.
-</p>
+<main class="page">
+  <div class="card">
 
-<h2>Information We Do Not Collect</h2>
-<p>The App does not collect, store, or transmit:</p>
-<ul>
-  <li>Your name, email address, phone number, or any account information — the App has no sign-up or login</li>
-  <li>Your location</li>
-  <li>Contacts, photos, camera, or microphone data</li>
-  <li>Advertising identifiers — the App shows no ads</li>
-  <li>Analytics or usage-tracking data of any kind</li>
-</ul>
+    <div class="summary">
+      <div class="summary-item">
+        <div class="summary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 3 5 6v5c0 5 3.2 8.3 7 10 3.8-1.7 7-5 7-10V6l-7-3Z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <strong>No Personal Data</strong>
+        <span>Privacy by design</span>
+      </div>
 
-<h2>Data Stored On Your Device</h2>
-<p>
-The App stores the following data locally on your device only. This data is
-never uploaded anywhere and is only accessible to the App itself:
-</p>
-<ul>
-  <li>Your bookmarks and reading position (which page/Surah/Ayah you last read or saved)</li>
-  <li>Your app preferences (theme, font, reciter, and similar settings)</li>
-  <li>The Quran text/audio/PDF content packs you choose to download</li>
-</ul>
-<p>
-This data is removed automatically if you uninstall the App, or manually if
-you clear the App's storage from your device settings.
-</p>
+      <div class="summary-item">
+        <div class="summary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 12a8 8 0 1 0 16 0"/>
+            <path d="M7 12h10M9 8l-2 4 2 4M15 8l2 4-2 4"/>
+          </svg>
+        </div>
+        <strong>100% Ad-Free</strong>
+        <span>No advertising or analytics</span>
+      </div>
 
-<h2>Internet Access</h2>
-<p>
-The App connects to the internet only to download optional Quran reading
-layouts, fonts, and audio recitation packs that you choose to download from
-within the App. These files are hosted on GitHub. No personal or device
-information is sent as part of these downloads beyond the standard, minimal
-technical information any internet connection requires (e.g. your device's
-IP address, which is standard for any network request and is not logged or
-used by us).
-</p>
+      <div class="summary-item">
+        <div class="summary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="5" y="3" width="14" height="18" rx="2"/>
+            <path d="M9 7h6M9 11h6M9 15h3"/>
+          </svg>
+        </div>
+        <strong>Local Storage</strong>
+        <span>Your preferences stay on-device</span>
+      </div>
+    </div>
 
-<h2>Permissions Used</h2>
-<p>The App requests the following Android permissions:</p>
-<ul>
-  <li><strong>Internet access</strong> — to download optional content packs</li>
-  <li><strong>Network state</strong> — to check whether a connection is available before attempting a download</li>
-</ul>
-<p>
-The App does not request access to your camera, microphone, location,
-contacts, storage, or any other sensitive permission.
-</p>
+    <div class="content">
+      <p class="intro">
+        Al-Quran: Sawt-Al-Sadaqat ("the App") is developed and maintained by
+        <strong>Samad Ali Aftab</strong>. This Privacy Policy explains what
+        information the App does and does not collect, how locally stored
+        information is handled, and how optional online content downloads work.
+      </p>
 
-<h2>Children's Privacy</h2>
-<p>
-The App does not knowingly collect any information from anyone, including
-children, because it does not collect personal information from any user.
-</p>
+      <section>
+        <div class="section-title">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 3 5 6v5c0 5 3.2 8.3 7 10 3.8-1.7 7-5 7-10V6l-7-3Z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h2>Summary</h2>
+        </div>
+        <p>
+          The App does not require an account, does not collect personal
+          information, does not use analytics or advertising, and does not
+          share any data with third parties. Everything you read, listen to,
+          or bookmark stays on your own device.
+        </p>
+      </section>
 
-<h2>Changes to This Policy</h2>
-<p>
-If this policy changes, the updated version will be posted at this same
-address with a revised "Last updated" date.
-</p>
+      <section>
+        <div class="section-title">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M8 8l8 8M16 8l-8 8"/>
+            </svg>
+          </div>
+          <h2>Information We Do Not Collect</h2>
+        </div>
+        <p>The App does not collect, store, or transmit:</p>
+        <ul>
+          <li>Your name, email address, phone number, or account information — the App has no sign-up or login.</li>
+          <li>Your location.</li>
+          <li>Contacts, photos, camera, or microphone data.</li>
+          <li>Advertising identifiers — the App shows no ads.</li>
+          <li>Analytics or usage-tracking data of any kind.</li>
+        </ul>
+      </section>
 
-<h2>Contact</h2>
-<p>
-If you have questions about this policy, you can directly reach out at
-<a href="mailto:samadali07@gmail.com">samadali07@gmail.com</a>, or via the contact
-information listed on the App's Google Play Store page.
-</p>
+      <section>
+        <div class="section-title">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 4h12v16H6z"/>
+              <path d="M9 8h6M9 12h6M9 16h4"/>
+            </svg>
+          </div>
+          <h2>Data Stored On Your Device</h2>
+        </div>
+        <p>
+          The App stores the following information locally on your device only.
+          This data is not uploaded by the App and is used only to provide the
+          features you choose to use:
+        </p>
+        <ul>
+          <li>Your bookmarks and reading position (such as the last page, Surah, or Ayah you read or saved).</li>
+          <li>Your app preferences, including theme, font, reciter, and similar settings.</li>
+          <li>The Quran text, audio, and PDF content packs you choose to download.</li>
+        </ul>
+        <div class="highlight">
+          This locally stored app data is removed when you uninstall the App,
+          or when you clear the App's storage from your device settings.
+        </div>
+      </section>
 
+      <section>
+        <div class="section-title">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M5 4h14v16H5z"/>
+              <path d="M8 8h8M8 12h5"/>
+              <path d="M16 16h.01"/>
+            </svg>
+          </div>
+          <h2>Internet Access</h2>
+        </div>
+        <p>
+          The App connects to the internet only when you choose to download
+          optional Quran reading layouts, fonts, audio recitation packs, or
+          other supported content from within the App. These files are hosted
+          on GitHub.
+        </p>
+        <p>
+          The App does not send personal information as part of these downloads.
+          As with any internet connection, standard technical network
+          information such as an IP address may be visible to the hosting
+          service as part of normal network communication. We do not collect,
+          use, or maintain such information for tracking purposes.
+        </p>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 7h12M8 4h8l1 17H7L8 4Z"/>
+              <path d="M10 10v7M14 10v7"/>
+            </svg>
+          </div>
+          <h2>Permissions Used</h2>
+        </div>
+        <p>The App requests the following Android permissions:</p>
+        <ul>
+          <li><strong>Internet access</strong> — to download optional content packs.</li>
+          <li><strong>Network state</strong> — to check whether a connection is available before attempting a download.</li>
+        </ul>
+        <p>
+          The App does not request access to your camera, microphone, location,
+          contacts, or other sensitive permissions.
+        </p>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="8" r="3"/>
+              <path d="M5 20c1-4 4-6 7-6s6 2 7 6"/>
+            </svg>
+          </div>
+          <h2>Children's Privacy</h2>
+        </div>
+        <p>
+          The App does not knowingly collect any information from anyone,
+          including children, because it does not collect personal information
+          from any user.
+        </p>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 5h16v14H4z"/>
+              <path d="M8 9h8M8 13h6"/>
+            </svg>
+          </div>
+          <h2>Changes to This Policy</h2>
+        </div>
+        <p>
+          If this policy changes, the updated version will be posted at this
+          same address with a revised "Last updated" date.
+        </p>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 6h16v12H4z"/>
+              <path d="m5 7 7 6 7-6"/>
+            </svg>
+          </div>
+          <h2>Contact</h2>
+        </div>
+
+        <div class="contact">
+          <p>
+            If you have questions about this Privacy Policy, you can contact
+            <strong>Samad Ali Aftab</strong> directly at
+            <a href="mailto:samadali07@gmail.com">samadali07@gmail.com</a>,
+            or through the contact information listed on the App's Google Play
+            Store page.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <span class="gold">✦</span>
+    Al-Quran: Sawt-Al-Sadaqat · Privacy &amp; Respect
+    <span class="gold">✦</span>
+  </footer>
+</main>
 </body>
 </html>
